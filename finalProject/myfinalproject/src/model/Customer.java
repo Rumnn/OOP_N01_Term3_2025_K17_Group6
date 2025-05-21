@@ -17,6 +17,7 @@ public class Customer {
 
     // Phương thức hiển thị thông tin
     public void displayInfo() {
+        System.out.println("ID          : " + id);
         System.out.println("NameName    : " + name);
         System.out.println("Email       : " + email);
         System.out.println("NumberNumber: " + phoneNumber);
