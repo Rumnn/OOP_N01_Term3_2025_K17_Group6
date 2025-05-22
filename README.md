@@ -36,8 +36,6 @@
 + thêm sửa xóa khách hàng.
 + hiển thị thông tin khách hàng mua vé.
 
-- chức năng 
-
 
 
 
