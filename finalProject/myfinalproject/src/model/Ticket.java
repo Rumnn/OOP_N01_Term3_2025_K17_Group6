@@ -15,7 +15,7 @@ public class Ticket {
         this.price = price;
     }
 
-    public void printTicket() {
+    public void displayTicket() {
         System.out.println("=== Movie Ticket ===");
         System.out.println("Ticket ID   : " + ticketId);
         System.out.println("Movie       : " + movie.getTitle());

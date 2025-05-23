@@ -21,7 +21,7 @@ public class App {
 
         // In thông tin vé
         System.out.println("\n=== Thong tin veve ===");
-        ticket.printTicket();
+        ticket.displayTicket();
 
         // Hiển thị thông tin phim
         System.out.println("\n=== Thông Tin Phim ===");
