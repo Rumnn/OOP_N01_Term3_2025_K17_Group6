@@ -15,6 +15,38 @@ public class Ticket {
         this.price = price;
     }
 
+    public String getTicketId() {
+        return ticketId;
+    }
+    public void setTicketId(String ticketId) {
+        this.ticketId = ticketId;
+    }
+    public Movie getMovie() {
+        return movie;
+    }
+    public void setMovie(Movie movie) {
+        this.movie = movie;
+    }
+    public String getSeat() {
+        return seat;
+    }
+    public void setSeat(String seat) {
+        this.seat = seat;
+    }
+    public String getShowTime() {
+        return showTime;
+    }
+    public void setShowTime(String showTime) {
+        this.showTime = showTime;
+    }
+    public double getPrice() {
+        return price;
+    }
+    public void setPrice(double price) {
+        this.price = price;
+    }
+    
+
     public void displayTicket() {
         System.out.println("=== Movie Ticket ===");
         System.out.println("Ticket ID   : " + ticketId);

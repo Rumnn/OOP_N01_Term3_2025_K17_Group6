@@ -38,7 +38,26 @@ public class Movie {
 
     public boolean isSuitableForAge(int viewerAge) {
     return viewerAge >= age;
-}
+    }
+    public void setTitle(String title) {
+        this.title = title;
+    }
+    public void setShowTime(String showTime) {
+        this.showTime = showTime;
+    }
+    public void setDuration(int duration) {
+        this.duration = duration;
+    }
+    public void setGenre(String genre) {
+        this.genre = genre;
+    }
+    public void setAge(int age) {
+        this.age = age;
+    }
+    public String getId() {
+        return title + "_" + showTime; // Giả sử ID là sự kết hợp của tên phim và ngày phát hành
+    }
+    
 
 
     public void display() {

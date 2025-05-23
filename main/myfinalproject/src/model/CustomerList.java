@@ -1,7 +1,6 @@
-  package model;
+package model;
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+
 
 public class CustomerList {
 
@@ -9,35 +8,32 @@ public class CustomerList {
 
 
     public ArrayList<Customer> addCustomers(Customer cu) {
-
         cus.add(cu);
         return cus;
 
     }
 
-    public ArrayList<Customer> getEditCustomers(String fullname, int cusId) {
+    public ArrayList<Customer> getEditCustomers(String fullname, String cusId) {
 
         for (int i = 0; i < cus.size(); i++) {
-            if (Integer.parseInt(cus.get(i).getId()) == cusId) {
+            if (cus.get(i).getId().equals(cusId)) {
                 cus.get(i).setName(fullname); // Cập nhật tên khách hàng
                 break;
             }
         }
         return cus; // Trả về danh sách vé
-    
-    
     }
-    public ArrayList<Customer> getDeleteCustomers(int cusId) {
 
+    public ArrayList<Customer> getDeleteCustomers(String customersDel) {
+
+        String delId = customersDel;
         for (int i = 0; i < cus.size(); i++) {
-            if (Integer.parseInt(cus.get(i).getId()) == cusId) {
+            if (cus.get(i).getId().equals(delId)) {
                 cus.remove(i); // Xóa khách hàng
                 break;
             }
         }
         return cus; // Trả về danh sách vé
-    
-    
     }
 
 

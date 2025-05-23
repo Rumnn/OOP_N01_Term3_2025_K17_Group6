@@ -3,54 +3,58 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 import model.Customer;
+import model.CustomerList;
 
 public class TestCustomer {
-    public 
-    public static void test(String[] args) {
-        Customer c = new Customer("KH01", "Nguyen Van A", "a@gmail.com", "0901234567");
-        c.displayInfo(); // Kỳ vọng: In ra tên, email và số điện thoại khách
-    }
-    public void testEditDelete() {
 
-        ArrayList<Customer> sl = new ArrayList<Customer>();
-        Customer s1 = new Customer("KH01", "Nguyen Van A",,"a@gmail.com", 12345);
-        Customer s2 = new Customer("Tran Van Minh", 2);
-        Customer s3 = new Customer("Nguyen An", 101010);
+    public void testEditCustomer() {
 
-        sl.add(s1);
-        sl.add(s2);
-        sl.add(s3);
+        ArrayList<Customer> cl = new ArrayList<Customer>();
+        Customer s1 = new Customer("KH02", "Nguyen Van Ann","ann@gmail.com", "0651234567");
+        Customer s2 = new Customer("KH03", "Tran Van Minh", "tran@gmail.com", "0657654321");
+        Customer s3 = new Customer("KH04", "Nguyen Anh", "nguyen@gmail.com", "0123456789");
 
-        CustomerList stuList = new CustomerList();
-        stuList.addCustomers(s1);
-        stuList.addCustomers(s2);
-        stuList.addCustomers(s3);
+        cl.add(s1);
+        cl.add(s2);
+        cl.add(s3);
+
+        CustomerList CusList = new CustomerList();
+        CusList.addCustomers(s1);
+        CusList.addCustomers(s2);
+        CusList.addCustomers(s3);
 
         // cap nhat thong tin
 
-        System.out.println("Enter Customers ID");
+        System.out.println("nhap ID khach hang can sua");
         Scanner CustomersID = new Scanner(System.in);
 
-        int s = CustomersID.nextInt();
+        String s = CustomersID.nextLine();
 
-        System.out.println("Enter Customers fullname");
+        System.out.println("nhap ten khach hang moi");
 
         Scanner fullname = new Scanner(System.in); // Create a Scanner object
 
         String newName = fullname.nextLine();
 
-        stuList.getEditCustomers(newName, s);
+        CusList.getEditCustomers(newName, s);
 
-        stuList.printCustomersList();
+        CusList.printCustomerList();
 
-        System.out.print("test xoa:");
-
+        System.out.println("test xoa:");
        
-        System.out.println("Enter Customers ID");
+        System.out.println("nhap ID khach hang can xoa");
         Scanner ID = new Scanner(System.in);
 
-        int CustomersDel = ID.nextInt();
-        stuList.getDeleteCustomers(CustomersDel);
+        String CustomersDel = ID.nextLine();
+        CusList.getDeleteCustomers(CustomersDel);
         System.out.print("danh sach sau khi xoa:");
-        stuList.printCustomersList();
+        CusList.printCustomerList();
+        System.out.println("test xoa thanh cong");
+    }
+    public static void main(String[] args) {
+        TestCustomer ts = new TestCustomer();
+        ts.testEditCustomer();
+        System.out.println("test thanh cong");
+
+    }
 }
