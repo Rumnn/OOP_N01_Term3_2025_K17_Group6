@@ -36,6 +36,11 @@ public class Movie {
         return age;
     }
 
+    public boolean isSuitableForAge(int viewerAge) {
+    return viewerAge >= age;
+}
+
+
     public void display() {
         System.out.println("Movie      : " + title);
         System.out.println("Launch Date: " + showTime);
