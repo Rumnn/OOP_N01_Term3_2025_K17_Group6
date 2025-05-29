@@ -1,16 +1,16 @@
 package model;
 
-public class Movie {
+public class Movie extends ObjectGeneral {     
 
     private String title;
     private String showTime; // Ngày phát hành
     private int duration; // Thời lượng của phim
     private String genre; // Thể loại phim
-    private int age; // Độ tuổi 
+    private int age; // Độ tuổi
 
-    public Movie(String title, String showTime, int duration, String genre, int age) { // Sửa tham số từ launchdate thành showTime
-        this.title = title;
-        this.showTime = showTime;  
+    public Movie(String id, String name, String showTime, int duration, String genre, int age) {
+        super(id, name);
+        this.showTime = showTime;
         this.duration = duration;
         this.genre = genre;
         this.age = age;

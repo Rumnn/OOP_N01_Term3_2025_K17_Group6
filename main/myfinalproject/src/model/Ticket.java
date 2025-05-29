@@ -1,13 +1,14 @@
 package model;
 
-public class Ticket {
+public class Ticket extends ObjectGeneral {
     private String ticketId; //mã vé
     private Movie movie;//phim (gồm tên, thể loại, thời lượng)
     private String seat; //hàng ghế
-    private String showTime;// thời gian chiếu 
-    private double price;// giá 
+    private String showTime;// thời gian chiếu
+    private double price;// giá
 
-    public Ticket(String ticketId, Movie movie, String seat, String showTime, double price) {
+    public Ticket(String id, String name, String ticketId, Movie movie, String seat, String showTime, double price) {
+        super(id, name);
         this.ticketId = ticketId;
         this.movie = movie;
         this.seat = seat;
