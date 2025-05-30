@@ -55,6 +55,7 @@
 1. Class Diagram
  
 <img src="nd2.jpg"></img>
+<img src="https://github.com/Rumnn/resource/blob/main/activitydiagram.jpg">
 
 
 2. Activity Diagram
