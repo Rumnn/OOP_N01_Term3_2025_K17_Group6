@@ -104,7 +104,7 @@ public class MainMenu {
         } else if (c == 3) {
             System.out.print("Nhập ID khách hàng cần xoá: ");
             String cusId = sc.nextLine();
-            customerList.getDeleteCustomers(cusId);
+            customerList.deleteCustomer(cusId);
             System.out.println("Đã xoá khách hàng.");
         } else {
             System.out.println("Lựa chọn không hợp lệ!");

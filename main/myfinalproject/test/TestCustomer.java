@@ -40,10 +40,6 @@ public class TestCustomer {
 
         System.out.println("\nDanh sách sau khi xóa:");
         CusList.printCustomerList();
-
-        // Tìm khách hàng theo tên
-        CusList.searchCustomerByName();
-
         sc.close();
         System.out.println("\nTest hoàn thành thành công!");
     }

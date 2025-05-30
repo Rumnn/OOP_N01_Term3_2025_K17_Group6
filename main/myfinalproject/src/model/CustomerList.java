@@ -37,7 +37,6 @@ public class CustomerList {
 
     // In danh sách khách hàng
     public void printCustomerList() {
-<<<<<<< HEAD
         int len= cus.size();
         for (int i=0; i < len; i++) {
                 System.out.println("Customer ID: " + cus.get(i).getId());
@@ -47,42 +46,4 @@ public class CustomerList {
                 System.out.println("-------------------------");
         }
     }
-=======
-        if (cus.isEmpty()) {
-            System.out.println("Danh sách khách hàng trống.");
-        } else {
-            System.out.println("Danh sách khách hàng:");
-            for (Customer c : cus) {
-                c.displayInfo();
-            }
-        }
-    }
-
-    // Tìm khách hàng theo tên (có thể tìm tương đối, không phân biệt hoa thường)
-    public void searchCustomerByName() {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Nhập tên khách hàng cần tìm: ");
-        String searchName = sc.nextLine().toLowerCase();
-
-        boolean found = false;
-        for (Customer c : cus) {
-            if (c.getName().toLowerCase().contains(searchName)) {
-                c.displayInfo();
-                found = true;
-            }
-        }
-
-        if (!found) {
-            System.out.println("Không tìm thấy khách hàng nào có tên chứa: " + searchName);
-        }
-        sc.close(); // Xử lý cảnh báo
-    }
-
-    // Dữ liệu mẫu (nếu cần)
-    public void themDuLieuMau() {
-        cus.add(new Customer("C01", "Nguyen Van A", "a@gmail.com", "0123456789"));
-        cus.add(new Customer("C02", "Tran Thi B", "b@gmail.com", "0223456789"));
-        cus.add(new Customer("C03", "Le Van C", "c@gmail.com", "0323456789"));
-    }
->>>>>>> e32ba922b3e82ef788183591aa24b5b3d052f942
 }
