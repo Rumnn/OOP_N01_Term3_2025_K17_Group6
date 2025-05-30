@@ -85,7 +85,7 @@ public class MainMenu {
             System.out.print("Số điện thoại: ");
             String phone = sc.nextLine();
             Customer cu = new Customer(id, name, email, phone);
-            customerList.addCustomers(cu);
+            customerList.addCustomer(cu);
             System.out.println("Đã thêm khách hàng.");
         } else if (c == 2) {
             customerList.printCustomerList();
