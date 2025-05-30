@@ -9,9 +9,9 @@ public class TestMovie {
     
     public void testEditDelete() {
         ArrayList<Movie> movies = new ArrayList<Movie>();
-        Movie m = new Movie("Avengers", "2025-05-01", 150, "Action", 16); // Thêm tham số age
-        Movie m1 = new Movie("sieu nhan gao", "2025-12-15", 150, "Action", 16); // Thêm tham số age
-        Movie m2 = new Movie("Quy nhap trang", "2025-5-8", 150, "kinh di", 16); // Thêm tham số age
+        Movie m = new Movie("113", "Avengers", "2025-05-01", 150, "Action", 16); // Thêm tham số age
+        Movie m1 = new Movie("114", "Sieu nhan gao", "2025-12-15", 150, "Action", 16); // Thêm tham số age
+        Movie m2 = new Movie("115", "Quy nhap trang", "2025-5-8", 150, "kinh di", 16); // Thêm tham số age
         movies.add(m);
         movies.add(m1);
         movies.add(m2);

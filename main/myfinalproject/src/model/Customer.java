@@ -1,16 +1,13 @@
 package model;
 
-public class Customer {
-    private String id; // Mã khách hàng
-    private String name; // Tên khách hàng
+public class Customer extends ObjectGeneral {
     private String email; // Địa chỉ email
     private String phoneNumber; // Số điện thoại
     
 
     // Constructor
     public Customer(String id, String name, String email, String phoneNumber) {
-        this.id = id;
-        this.name = name;
+        super(id, name);
         this.email = email;
         this.phoneNumber = phoneNumber;
     }

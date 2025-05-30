@@ -20,7 +20,6 @@
 ## Xây dựng ứng dụng: CinemaTicketBooking (Hệ thống bán vé xem phim)
 
 - Giao diện <b>Java Spring Boot</b>.
-- Giao diện <b>JavaFx</b>.
 - Chức năng quản lí:
 1. Quản lí phim.
 2. Quản lí vé và khách hàng mua vé.
@@ -51,4 +50,4 @@
 
 
 
-<img src="ND2.jpg"></img>
+<img src="nd2.jpg"></img>
