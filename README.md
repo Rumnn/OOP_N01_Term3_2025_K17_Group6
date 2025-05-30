@@ -52,4 +52,11 @@
 
 
 
+1. Class Diagram
+ 
 <img src="nd2.jpg"></img>
+
+
+2. Activity Diagram
+
+
