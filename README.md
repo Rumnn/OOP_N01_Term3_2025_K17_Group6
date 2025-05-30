@@ -3,7 +3,9 @@
 ## Thành viên trong  nhóm
 - Hoàng văn Độ 23010581 
 - Nguyễn Tiến Doanh 23010472 
-- Dương Thiện Hùng 23010601 
+- Dương Thiện Hùng 23010601
+
+- lethunguyen
 
 ## Mô tả đối tượng
 1. ""Movie"" Quản lý thông tin của phim
@@ -50,4 +52,11 @@
 
 
 
-<img src="ND2.jpg"></img>
+1. Class Diagram
+ 
+<img src="nd2.jpg"></img>
+
+
+2. Activity Diagram
+
+

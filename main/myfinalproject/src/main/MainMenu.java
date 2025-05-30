@@ -62,7 +62,7 @@ public class MainMenu {
             int duration = Integer.parseInt(sc.nextLine());
             System.out.print("Thể loại: ");
             String genre = sc.nextLine();
-            System.out.print("Độ tuổi: ");
+            System.out.print("Độ tuổi (chỉ nhập số): ");
             int age = Integer.parseInt(sc.nextLine());
             Movie m = new Movie(id, title, showTime, duration, genre, age);
             movieList.addMovie(m);
@@ -97,7 +97,7 @@ public class MainMenu {
             System.out.print("Số điện thoại: ");
             String phone = sc.nextLine();
             Customer cu = new Customer(id, name, email, phone);
-            customerList.addCustomers(cu);
+            customerList.addCustomer(cu);
             System.out.println("Đã thêm khách hàng.");
         } else if (c == 2) {
             customerList.printCustomerList();

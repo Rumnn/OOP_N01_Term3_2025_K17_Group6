@@ -46,5 +46,6 @@ public class Customer extends ObjectGeneral {
         System.out.println("NameName    : " + name);
         System.out.println("Email       : " + email);
         System.out.println("NumberNumber: " + phoneNumber);
+        System.out.println("----------------------------");
     }
 }
