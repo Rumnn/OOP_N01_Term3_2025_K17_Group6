@@ -30,9 +30,14 @@ public class TicketList {
         return ticket; // Trả về danh sách vé
     }
     public void printTicketList() {
-        int len= ticket.size();
+        int len = ticket.size();
         for (int i=0; i < len; i++) {
-                System.out.println("Ticket ID: " + ticket.get(i).getTicketId());
+            System.out.println("Ticket ID: " + ticket.get(i).getTicketId());
+            System.out.println("Movie : " + ticket.get(i).getMovie().getTitle());
+            System.out.println("Seat: " + ticket.get(i).getSeat());
+            System.out.println("Show Time: " + ticket.get(i).getShowTime());
+            System.out.println("Price: " + ticket.get(i).getPrice());
+            System.out.println("-------------------------");
 
         }
     }

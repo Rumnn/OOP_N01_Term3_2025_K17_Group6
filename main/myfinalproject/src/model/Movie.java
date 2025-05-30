@@ -57,7 +57,6 @@ public class Movie extends ObjectGeneral {
     public String getId() {
         return title + "_" + showTime; // Giả sử ID là sự kết hợp của tên phim và ngày phát hành
     }
-    
 
 
     public void display() {
@@ -66,5 +65,8 @@ public class Movie extends ObjectGeneral {
         System.out.println("Duration   : " + duration + " minutes");
         System.out.println("Genre      : " + genre);
         System.out.println("Age Rating : " + age + "+");
+        System.out.println("_____________________________");
     }
+
+
 }

@@ -42,10 +42,9 @@ public class CustomerList {
         for (int i=0; i < len; i++) {
                 System.out.println("Customer ID: " + cus.get(i).getId());
                 System.out.println("Customer Name: " + cus.get(i).getName());
+                System.out.println("Customer Phone: " + cus.get(i).getPhoneNumber());
+                System.out.println("Customer Email: " + cus.get(i).getEmail());
+                System.out.println("-------------------------");
         }
     }
-
-
-
-    
 }

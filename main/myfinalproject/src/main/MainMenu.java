@@ -48,6 +48,7 @@ public class MainMenu {
         System.out.println("\n--- Quản lý phim ---");
         System.out.println("1. Thêm phim");
         System.out.println("2. Hiển thị danh sách phim");
+        System.out.println("3. Xoá phim");
         System.out.print("Chọn: ");
         int c = Integer.parseInt(sc.nextLine());
         if (c == 1) {
@@ -68,6 +69,14 @@ public class MainMenu {
             System.out.println("Đã thêm phim.");
         } else if (c == 2) {
             movieList.printMovieList();
+        } else if (c == 3) {
+            System.out.print("Nhập ID phim cần xoá: ");
+            String movieIdStr = sc.nextLine();
+            int movieId = Integer.parseInt(movieIdStr);
+            movieList.getDeleteMovie(movieId);
+            System.out.println("Đã xoá phim.");
+        } else {
+            System.out.println("Lựa chọn không hợp lệ!");
         }
     }
 
@@ -75,6 +84,7 @@ public class MainMenu {
         System.out.println("\n--- Quản lý khách hàng ---");
         System.out.println("1. Thêm khách hàng");
         System.out.println("2. Hiển thị danh sách khách hàng");
+        System.out.println("3. Xoá khách hàng");
         System.out.print("Chọn: ");
         int c = Integer.parseInt(sc.nextLine());
         if (c == 1) {
@@ -91,6 +101,13 @@ public class MainMenu {
             System.out.println("Đã thêm khách hàng.");
         } else if (c == 2) {
             customerList.printCustomerList();
+        } else if (c == 3) {
+            System.out.print("Nhập ID khách hàng cần xoá: ");
+            String cusId = sc.nextLine();
+            customerList.getDeleteCustomers(cusId);
+            System.out.println("Đã xoá khách hàng.");
+        } else {
+            System.out.println("Lựa chọn không hợp lệ!");
         }
     }
 
@@ -98,6 +115,7 @@ public class MainMenu {
         System.out.println("\n--- Quản lý vé ---");
         System.out.println("1. Thêm vé");
         System.out.println("2. Hiển thị danh sách vé");
+        System.out.println("3. Xoá vé");
         System.out.print("Chọn: ");
         int c = Integer.parseInt(sc.nextLine());
         if (c == 1) {
@@ -124,12 +142,19 @@ public class MainMenu {
             String time = sc.nextLine();
             System.out.print("Giá: ");
             double price = Double.parseDouble(sc.nextLine());
-            // Adjust the constructor call to match the available Ticket constructor
             Ticket t = new Ticket(id, name, ticketId, m, seat, time, price);
             ticketList.addTicket(t);
             System.out.println("Đã thêm vé.");
         } else if (c == 2) {
             ticketList.printTicketList();
+        } else if (c == 3) {
+            System.out.print("Nhập ID vé cần xoá: ");
+            int ticketId = Integer.parseInt(sc.nextLine());
+            ticketList.getDeleteTickets(ticketId);
+            System.out.println("Đã xoá vé.");
+        } else {
+            System.out.println("Lựa chọn không hợp lệ!");
         }
+
     }
 }

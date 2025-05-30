@@ -10,10 +10,10 @@ public class MovieList {
         return movies;
     }
 
-    public ArrayList<Movie> getEditMovie(String title, int movieId) {
+    public ArrayList<Movie> getEditMovie(String name, int movieId) {
         for (int i = 0; i < movies.size(); i++) {
             if (Integer.parseInt(movies.get(i).getId()) == movieId) {
-                movies.get(i).setTitle(title);
+                movies.get(i).setTitle(name);
                 break;
             }
         }
