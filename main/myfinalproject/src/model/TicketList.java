@@ -11,6 +11,7 @@ public class TicketList {
         ticket.add(tickets); // Thêm vé vào danh sách
         return ticket;
     }
+        
     public ArrayList<Ticket> getEditTickets(int ticketId) {
         for (int i = 0; i < ticket.size(); i++) {
             if (Integer.parseInt(ticket.get(i).getTicketId()) == ticketId) {

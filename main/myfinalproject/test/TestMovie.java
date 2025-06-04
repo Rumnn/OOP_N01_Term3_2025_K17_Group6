@@ -12,6 +12,7 @@ public class TestMovie {
         Movie m = new Movie("113", "Avengers", "2025-05-01", 150, "Action", 16); // Thêm tham số age
         Movie m1 = new Movie("114", "Sieu nhan gao", "2025-12-15", 150, "Action", 16); // Thêm tham số age
         Movie m2 = new Movie("115", "Quy nhap trang", "2025-5-8", 150, "kinh di", 16); // Thêm tham số age
+        
         movies.add(m);
         movies.add(m1);
         movies.add(m2);
