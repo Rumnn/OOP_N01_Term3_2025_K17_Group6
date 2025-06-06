@@ -54,7 +54,8 @@ public class TestTicket {
         // Xóa vé
         tk.printTicketList(); // Kỳ vọng: In ra danh sách vé sau khi xóa
         System.out.println("Đã xóa vé.");
-    }
 
+
+    }    
 }
 

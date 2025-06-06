@@ -42,4 +42,15 @@ public class TicketList {
 
         }
     }
+    // In danh sách vé của một khách hàng theo ID
+
+    public void printTicketsByCustomerId(String customerId) {
+        for (Ticket t : ticket) {
+            if (t.getName().equals(customerId) || t.getId().equals(customerId)) {
+                t.displayTicket();
+            }
+        }
+    }
+
+    
 }

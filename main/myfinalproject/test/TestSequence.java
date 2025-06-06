@@ -13,5 +13,5 @@ public class TestSequence {
           System.out.println(sl.current());
           sl.next();
            }
-     }
+   }
 }
