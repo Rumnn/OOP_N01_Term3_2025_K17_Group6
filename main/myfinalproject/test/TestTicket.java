@@ -10,7 +10,7 @@ public class TestTicket {
 
     public void testEditDelete() {
         ArrayList<Ticket> tickets = new ArrayList<Ticket>();
-        Movie m = new Movie("113", "One Piece", "2025-05-10", 120, "Adventure", 13);
+        Movie m = new Movie("113","One Piece", "One Piece", "2025-05-10", 120, "Adventure", 13);
         Ticket t = new Ticket("113", "Nguyen Van A", "T001", m, "A5", "18:00", 85000);
         Ticket t1 = new Ticket("114", "Nguyen Van B", "T002", m, "A6", "19:00", 85000);
         Ticket t2 = new Ticket("115", "Nguyen Van C", "T003", m, "A7", "20:00", 85000);

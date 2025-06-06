@@ -37,7 +37,11 @@ public class TicketList {
         int len = ticket.size();
         for (int i=0; i < len; i++) {
             System.out.println("Ticket ID: " + ticket.get(i).getTicketId());
-            System.out.println("Movie : " + ticket.get(i).getMovie().getTitle());
+            if (ticket.get(i).getMovie() != null) {
+                System.out.println("Movie : " + ticket.get(i).getMovie().getTitle());
+            } else {
+                System.out.println("Movie : null");
+            }
             System.out.println("Seat: " + ticket.get(i).getSeat());
             System.out.println("Show Time: " + ticket.get(i).getShowTime());
             System.out.println("Price: " + ticket.get(i).getPrice());
@@ -71,6 +75,11 @@ public class TicketList {
             }
             
         }
+    }
+
+    // Thống kê số lượng vé đã đặt
+    public int getTicketCount() {
+        return ticket.size(); // Trả về số lượng vé đã đặt
     }
 
 

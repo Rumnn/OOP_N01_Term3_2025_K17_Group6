@@ -55,6 +55,8 @@ public class MainMenu {
             System.out.print("ID phim: ");
             String id = sc.nextLine();
             System.out.print("Tên phim: ");
+            String name = sc.nextLine();
+            System.out.print("Tên phim: ");
             String title = sc.nextLine();
             System.out.print("Ngày chiếu: ");
             String showTime = sc.nextLine();
@@ -64,7 +66,7 @@ public class MainMenu {
             String genre = sc.nextLine();
             System.out.print("Độ tuổi (chỉ nhập số): ");
             int age = Integer.parseInt(sc.nextLine());
-            Movie m = new Movie(id, title, showTime, duration, genre, age);
+            Movie m = new Movie(id, name, title, showTime, duration, genre, age);
             movieList.addMovie(m);
             System.out.println("Đã thêm phim.");
         } else if (c == 2) {
@@ -135,7 +137,7 @@ public class MainMenu {
             String genre = sc.nextLine();
             System.out.print("Độ tuổi: ");
             int age = Integer.parseInt(sc.nextLine());
-            Movie m = new Movie(id, title, showTime, duration, genre, age);
+            Movie m = new Movie(id, name, title, showTime, duration, genre, age);
             System.out.print("Ghế: ");
             String seat = sc.nextLine();
             System.out.print("Giờ chiếu: ");

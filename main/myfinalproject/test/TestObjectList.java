@@ -11,7 +11,7 @@ public class TestObjectList {
         try {
             // Movie test
             ObjectList<Movie> movieList = new ObjectList<>();
-            Movie m1 = new Movie("113", "Avengers", "2025-05-01", 150, "Action", 16);
+            Movie m1 = new Movie("113","Avengers", "Avengers", "2025-05-01", 150, "Action", 16);
 
             movieList.add(m1);
             movieList.printAll();

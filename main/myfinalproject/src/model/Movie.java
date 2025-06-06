@@ -8,13 +8,17 @@ public class Movie extends ObjectGeneral {
     private String genre; // Thể loại phim
     private int age; // Độ tuổi
 
-    public Movie(String id, String name, String showTime, int duration, String genre, int age) {
+    public Movie(String id, String name, String title, String showTime, int duration, String genre, int age) {
+
         super(id, name);
+        this.title = title;
         this.showTime = showTime;
         this.duration = duration;
         this.genre = genre;
         this.age = age;
     }
+
+
 
     public String getTitle() {
         return title;
