@@ -47,6 +47,8 @@ public class TestBookingManager {
         customerList.addCustomer(customer2);
         customerList.addCustomer(customer3);
         customerList.addCustomer(customer4);
+
+
         // In danh sách khách hàng
         System.out.println("\n--- Danh sách khách hàng ---");
         customerList.printCustomerList();
@@ -60,13 +62,13 @@ public class TestBookingManager {
         ticketList.addTicket(ticket4);
 
         // In danh sach ve theo id
+        
+        System.out.println("\n--- Danh sách vé theo ID ---");
         ticketList.printTicketsByCustomerId(customer1.getId());
         ticketList.printTicketsByCustomerId(customer2.getId());
         ticketList.printTicketsByCustomerId(customer3.getId());
         ticketList.printTicketsByCustomerId(customer4.getId());
-        // In danh sách vé
-        System.out.println("\n--- Danh sách vé ---");
-        ticketList.printTicketList();
+        System.out.println("___________________________________________");
 
         // kiem tra gio chieu
         System.out.println("\n--- Vé sắp chiếu trong 1 giờ tới ---");

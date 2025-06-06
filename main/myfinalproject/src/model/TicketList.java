@@ -52,10 +52,16 @@ public class TicketList {
     // In danh sách vé của một khách hàng theo ID
 
     public void printTicketsByCustomerId(String customerId) {
+        System.out.println("--- Danh sách vé theo ID khách hàng: " + customerId + " ---");
+        boolean found = false;
         for (Ticket t : ticket) {
-            if (t.getName().equals(customerId) || t.getId().equals(customerId)) {
+            if (t.getId().equals(customerId)) {
                 t.displayTicket();
+                found = true;
             }
+        }
+        if (!found) {
+            System.out.println("Không tìm thấy vé nào cho khách hàng này.");
         }
     }
 
