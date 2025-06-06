@@ -65,5 +65,6 @@
 
 3. Lưu đồ thuật toán
 
-<img src="(https://github.com/Rumnn/resource/blob/main/LuuDoThuatToan.jpg">)
+<img src="https://github.com/Rumnn/resource/blob/main/LuuDoThuatToan.jpg">
+
 
