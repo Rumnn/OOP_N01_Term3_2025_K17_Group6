@@ -2,6 +2,9 @@ package model;
 
 import java.util.ArrayList;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 
 
 public class TicketList {
@@ -52,5 +55,24 @@ public class TicketList {
         }
     }
 
-    
+    //Kiểm tra giờ chiếu 
+    public void printUpComingTickets() {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+        LocalDateTime now = LocalDateTime.now();
+        
+        for (Ticket t : ticket) {
+            try{
+                LocalDateTime showTime = LocalDateTime.parse(t.getShowTime(), formatter);
+                if (!showTime.isBefore(now) && showTime.isBefore(now.plusHours(1))) { // Kiểm tra giờ chiếu chưa qua
+                    t.displayTicket(); // Hiển thị vé nếu giờ chiếu chưa qua
+                }
+            } catch (Exception e) {
+                
+            }
+            
+        }
+    }
+
+
+
 }
