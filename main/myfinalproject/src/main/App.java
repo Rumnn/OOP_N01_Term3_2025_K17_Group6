@@ -1,6 +1,7 @@
 package main;
 
 import test.TestSequence;
+import test.*;
 
 public class App {
     public static void main(String[] args) {
@@ -11,7 +12,12 @@ public class App {
 
 
 
-         TestSequence.test();
+        //  TestSequence.test();
+
+        TestBookingManager.test(args);
+        
+
+
 
     }
 }
