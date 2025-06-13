@@ -1,4 +1,4 @@
-package model;
+package com.example.servingwebcontent.model;
 
 public class ObjectGeneral {
     protected String id;

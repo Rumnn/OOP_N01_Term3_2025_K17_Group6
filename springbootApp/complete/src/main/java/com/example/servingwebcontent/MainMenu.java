@@ -1,13 +1,9 @@
-package main;
+package com.example.servingwebcontent;
 
 
 import java.util.Scanner;
-import model.Movie;
-import model.MovieList;
-import model.Customer;
-import model.CustomerList;
-import model.Ticket;
-import model.TicketList;
+import com.example.servingwebcontent.model.*;
+
 
 public class MainMenu {
     private MovieList movieList = new MovieList();

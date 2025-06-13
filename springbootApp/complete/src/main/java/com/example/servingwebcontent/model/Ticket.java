@@ -1,4 +1,4 @@
-package model;
+package com.example.servingwebcontent.model;
 
 public class Ticket extends ObjectGeneral {
     private String ticketId; //mã vé

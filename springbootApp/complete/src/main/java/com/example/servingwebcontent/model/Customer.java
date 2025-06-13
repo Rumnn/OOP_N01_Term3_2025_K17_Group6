@@ -1,4 +1,4 @@
-package model;
+package com.example.servingwebcontent.model;
 
 public class Customer extends ObjectGeneral {
     private String email; // Địa chỉ email
