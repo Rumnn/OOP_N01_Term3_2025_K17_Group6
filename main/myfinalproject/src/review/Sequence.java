@@ -1,4 +1,3 @@
-
 package review;
 
 public class Sequence {
