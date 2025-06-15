@@ -1,4 +1,6 @@
 package com.example.servingwebcontent;
+import com.example.servingwebcontent.model.MovieList;
+
 
 
 import java.util.Scanner;

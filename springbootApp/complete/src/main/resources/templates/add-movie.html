@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Thêm phim mới</title>
+</head>
+<body>
+    <h1>Thêm phim mới</h1>
+    <form th:action="@{/movies/add}" th:object="${movie}" method="post">
+        <label>Title: <input type="text" th:field="*{title}" /></label><br/>
+        <label>Show Time: <input type="text" th:field="*{showTime}" /></label><br/>
+        <label>Duration: <input type="number" th:field="*{duration}" /></label><br/>
+        <label>Genre: <input type="text" th:field="*{genre}" /></label><br/>
+        <label>Age: <input type="number" th:field="*{age}" /></label><br/>
+        <button type="submit">Thêm</button>
+    </form>
+    <a href="/movies">Quay lại danh sách phim</a>
+</body>
+</html>

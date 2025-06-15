@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 
 public class MovieList {
-    ArrayList<Movie> movies = new ArrayList<>();
+    public ArrayList<Movie> movies = new ArrayList<>();
 
     public ArrayList<Movie> addMovie(Movie movie) {
         movies.add(movie);
