@@ -67,4 +67,4 @@
 <img src="https://github.com/Rumnn/resource/blob/main/LuuDoThuatToan.jpg">
 
 4. UI thêm phim
-<img srcsrc="https://github.com/Do17032005/IMG/blob/main/%E1%BA%A2nh%20ch%E1%BB%A5p%20m%C3%A0n%20h%C3%ACnh%202025-06-18%20173221.png">
+<img src="https://github.com/Do17032005/IMG/blob/main/UI%20nh%E1%BA%ADp%20phim.png">
