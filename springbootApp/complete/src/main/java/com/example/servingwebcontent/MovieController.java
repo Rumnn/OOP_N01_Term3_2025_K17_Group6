@@ -34,7 +34,25 @@ public class MovieController {
 
     @GetMapping("/movies")
     public String showMovieList(Model model) {
-        model.addAttribute("movies", movieList);
+        try {
+            model.addAttribute("movies", movieList);
+        } catch (Exception e) {
+            model.addAttribute("error", "Lỗi khi lấy danh sách phim: " + e.getMessage());
+        } finally {
+            // Có thể log hoặc dọn dẹp tài nguyên nếu cần
+        }
         return "movies";
+    }
+
+    @GetMapping("/show")
+    public String showMovies(Model model) {
+        try {
+            model.addAttribute("movies", movieList);
+        } catch (Exception e) {
+            model.addAttribute("error", "Lỗi khi lấy danh sách phim: " + e.getMessage());
+        } finally {
+            // Có thể log hoặc dọn dẹp tài nguyên nếu cần
+        }
+        return "show";
     }
 }
