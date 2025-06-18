@@ -8,6 +8,17 @@ public class Movie extends ObjectGeneral {
     private String genre; // Thể loại phim
     private int age; // Độ tuổi
 
+    public Movie() {
+    super("", ""); // hoặc giá trị mặc định phù hợp với ObjectGeneral
+    this.title = "";
+    this.showTime = "";
+    this.duration = 0;
+    this.genre = "";
+    this.age = 0;
+}
+
+
+
     public Movie(String id, String name, String title, String showTime, int duration, String genre, int age) {
 
         super(id, name);
@@ -17,7 +28,6 @@ public class Movie extends ObjectGeneral {
         this.genre = genre;
         this.age = age;
     }
-
 
 
     public String getTitle() {
@@ -59,11 +69,14 @@ public class Movie extends ObjectGeneral {
         this.age = age;
     }
     public String getId() {
-        return title + "_" + showTime; // Giả sử ID là sự kết hợp của tên phim và ngày phát hành
+        return  id+ "_" + showTime; // Giả sử ID là sự kết hợp của ID và ngày phát hành
     }
 
 
     public void display() {
+        System.out.println("_____________________________");
+        System.out.println("ID         : " + getId());
+        System.out.println("Name       : " + getName());
         System.out.println("Movie      : " + title);
         System.out.println("Launch Date: " + showTime);
         System.out.println("Duration   : " + duration + " minutes");

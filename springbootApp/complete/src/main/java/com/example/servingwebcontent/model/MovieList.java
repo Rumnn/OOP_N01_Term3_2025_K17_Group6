@@ -33,6 +33,7 @@ public class MovieList {
     public void printMovieList() {
         for (Movie movie : movies) {
             System.out.println("Movie ID: " + movie.getId());
+            System.out.println("Movie Name: " + movie.getName());
             System.out.println("Movie Title: " + movie.getTitle());
             System.out.println("Show Time: " + movie.getShowTime());
             System.out.println("Duration: " + movie.getDuration());

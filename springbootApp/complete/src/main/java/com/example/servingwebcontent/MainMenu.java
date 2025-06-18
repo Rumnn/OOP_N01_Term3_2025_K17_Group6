@@ -43,40 +43,47 @@ public class MainMenu {
     }
 
     private void movieMenu() {
-        System.out.println("\n--- Quản lý phim ---");
-        System.out.println("1. Thêm phim");
-        System.out.println("2. Hiển thị danh sách phim");
-        System.out.println("3. Xoá phim");
-        System.out.print("Chọn: ");
-        int c = Integer.parseInt(sc.nextLine());
-        if (c == 1) {
-            System.out.print("ID phim: ");
-            String id = sc.nextLine();
-            System.out.print("Tên phim: ");
-            String name = sc.nextLine();
-            System.out.print("Tên phim: ");
-            String title = sc.nextLine();
-            System.out.print("Ngày chiếu: ");
-            String showTime = sc.nextLine();
-            System.out.print("Thời lượng: ");
-            int duration = Integer.parseInt(sc.nextLine());
-            System.out.print("Thể loại: ");
-            String genre = sc.nextLine();
-            System.out.print("Độ tuổi (chỉ nhập số): ");
-            int age = Integer.parseInt(sc.nextLine());
-            Movie m = new Movie(id, name, title, showTime, duration, genre, age);
-            movieList.addMovie(m);
-            System.out.println("Đã thêm phim.");
-        } else if (c == 2) {
-            movieList.printMovieList();
-        } else if (c == 3) {
-            System.out.print("Nhập ID phim cần xoá: ");
-            String movieIdStr = sc.nextLine();
-            int movieId = Integer.parseInt(movieIdStr);
-            movieList.getDeleteMovie(movieId);
-            System.out.println("Đã xoá phim.");
-        } else {
-            System.out.println("Lựa chọn không hợp lệ!");
+        try {
+            System.out.println("\n--- Quản lý phim ---");
+            System.out.println("1. Thêm phim");
+            System.out.println("2. Hiển thị danh sách phim");
+            System.out.println("3. Xoá phim");
+            System.out.print("Chọn: ");
+            int c = Integer.parseInt(sc.nextLine());
+            if (c == 1) {
+                System.out.print("ID phim: ");
+                String id = sc.nextLine();
+                System.out.print("Tên phim: ");
+                String name = sc.nextLine();
+                System.out.print("Tên phim: ");
+                String title = sc.nextLine();
+                System.out.print("Ngày chiếu: ");
+                String showTime = sc.nextLine();
+                System.out.print("Thời lượng: ");
+                int duration = Integer.parseInt(sc.nextLine());
+                System.out.print("Thể loại: ");
+                String genre = sc.nextLine();
+                System.out.print("Độ tuổi (chỉ nhập số): ");
+                int age = Integer.parseInt(sc.nextLine());
+                Movie m = new Movie(id, name, title, showTime, duration, genre, age);
+                movieList.addMovie(m);
+                System.out.println("Đã thêm phim.");
+            } else if (c == 2) {
+                movieList.printMovieList();
+            } else if (c == 3) {
+                System.out.print("Nhập ID phim cần xoá: ");
+                String movieIdStr = sc.nextLine();
+                int movieId = Integer.parseInt(movieIdStr);
+                movieList.getDeleteMovie(movieId);
+                System.out.println("Đã xoá phim.");
+            } else {
+                System.out.println("Lựa chọn không hợp lệ!");
+            }
+        } catch (Exception e) {
+            System.out.println("Đã xảy ra lỗi: " + e.getMessage());
+        } finally {
+            sc.close();
+            System.out.println("Kết thúc quản lý phim.");
         }
     }
 
