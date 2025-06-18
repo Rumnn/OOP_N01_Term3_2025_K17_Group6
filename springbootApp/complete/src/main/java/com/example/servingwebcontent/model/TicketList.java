@@ -66,28 +66,28 @@ public class TicketList {
     }
 
     //Kiểm tra giờ chiếu 
-    public void printUpComingTickets() {
+    public List<Ticket> printUpComingTickets() {
+        List<Ticket> result = new ArrayList<>();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
         LocalDateTime now = LocalDateTime.now();
-        
+
         for (Ticket t : ticket) {
-            try{
+            try {
                 LocalDateTime showTime = LocalDateTime.parse(t.getShowTime(), formatter);
-                if (!showTime.isBefore(now) && showTime.isBefore(now.plusHours(1))) { // Kiểm tra giờ chiếu chưa qua
-                    t.displayTicket(); // Hiển thị vé nếu giờ chiếu chưa qua
+                if (!showTime.isBefore(now) && showTime.isBefore(now.plusHours(1))) {
+                    result.add(t);
                 }
             } catch (Exception e) {
-                
+                // Log lỗi nếu cần
             }
-            
         }
+        return result;
     }
 
     // Thống kê số lượng vé đã đặt
     public int getTicketCount() {
         return ticket.size(); // Trả về số lượng vé đã đặt
     }
-
 
 
 }
