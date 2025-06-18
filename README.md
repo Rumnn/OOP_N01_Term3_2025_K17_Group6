@@ -68,3 +68,6 @@
 
 4. UI thêm phim
 <img src="https://github.com/Do17032005/IMG/blob/main/UI%20nh%E1%BA%ADp%20phim.png">
+
+5. UI vé sắp chiếu
+<img src="https://github.com/Rumnn/resource/blob/main/upcoming.PNG">
