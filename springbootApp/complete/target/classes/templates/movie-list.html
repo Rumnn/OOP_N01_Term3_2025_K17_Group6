@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Danh sách phim</title>
+</head>
+<body>
+    <h1>Danh sách phim</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th><th>Name</th><th>Title</th><th>Show Time</th><th></th><th>Duration</th><th>Genre</th><th>Age</th>
+        </tr>
+        <tr th:each="movie : ${movies}">
+            <td th:text="${movie.id}"></td>
+            <td th:text="${movie.name}"></td>
+            <td th:text="${movie.title}"></td>
+            <td th:text="${movie.showTime}"></td>
+            <td th:text="${movie.dateTime}"></td>
+            <td th:text="${movie.duration}"></td>
+            <td th:text="${movie.genre}"></td>
+            <td th:text="${movie.age}"></td>
+        </tr>
+    </table>
+    <a href="/movies/add">Thêm phim mới</a>
+    <a th:href="@{/tickets}">Xem danh sách vé</a>
+    <a href="/customers">Quay lại danh sách khách hàng</a>
+</body>
+</html>
