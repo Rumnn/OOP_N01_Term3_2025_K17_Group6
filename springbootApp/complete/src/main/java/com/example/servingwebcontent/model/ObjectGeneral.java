@@ -4,6 +4,11 @@ public class ObjectGeneral {
     protected String id;
     protected String name;
 
+    public ObjectGeneral() {
+        this.id = "";
+        this.name = "";
+    }
+
     public ObjectGeneral(String id, String name) {
         this.id = id;
         this.name = name;

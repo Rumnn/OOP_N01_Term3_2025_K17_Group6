@@ -4,7 +4,12 @@ public class Customer extends ObjectGeneral {
     private String email; // Địa chỉ email
     private String phoneNumber; // Số điện thoại
     
-
+public Customer() {
+        super();
+        this.email = "";
+        this.phoneNumber = "";
+        
+    }
     // Constructor
     public Customer(String id, String name, String email, String phoneNumber) {
         super(id, name);
