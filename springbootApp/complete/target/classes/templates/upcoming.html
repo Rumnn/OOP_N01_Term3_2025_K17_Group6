@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Vé sắp chiếu</title>
+</head>
+<body>
+    <h1>Danh sách vé sắp chiếu trong 1 giờ tới</h1>
+    <div th:if="${error}" th:text="${error}" style="color:red"></div>
+    <table border="1">
+        <tr>
+            <th>Tên phim</th>
+            <th>Ngày chiếu</th>
+            <th>Giờ chiếu</th>
+        </tr>
+        <tr th:each="ticket : ${tickets}">
+            <td th:text="${ticket.movieName}"></td>
+            <td th:text="${ticket.showTime}"></td>
+            <td th:text="${ticket.time}"></td>
+        </tr>
+    </table>
+    <a href="/upcoming-tickets">Danh sách chiếu trong 1H</a>
+</body>
+</html>

@@ -1,10 +1,10 @@
 package com.example.servingwebcontent;
-import com.example.servingwebcontent.model.MovieList;
-
-
-
-import java.util.Scanner;
 import com.example.servingwebcontent.model.*;
+import java.time.format.DateTimeFormatter;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.Scanner;
 
 
 public class MainMenu {
@@ -59,13 +59,15 @@ public class MainMenu {
                 String title = sc.nextLine();
                 System.out.print("Ngày chiếu: ");
                 String showTime = sc.nextLine();
+                System.out.print("Giờ chiếu: ");
+                String dateTime = sc.nextLine();
                 System.out.print("Thời lượng: ");
                 int duration = Integer.parseInt(sc.nextLine());
                 System.out.print("Thể loại: ");
                 String genre = sc.nextLine();
                 System.out.print("Độ tuổi (chỉ nhập số): ");
                 int age = Integer.parseInt(sc.nextLine());
-                Movie m = new Movie(id, name, title, showTime, duration, genre, age);
+                Movie m = new Movie(id, name, title, showTime, dateTime ,duration, genre, age);
                 movieList.addMovie(m);
                 System.out.println("Đã thêm phim.");
             } else if (c == 2) {
@@ -126,31 +128,10 @@ public class MainMenu {
         System.out.print("Chọn: ");
         int c = Integer.parseInt(sc.nextLine());
         if (c == 1) {
-            System.out.print("ID phim: ");
+            System.out.print("ID vé: ");
             String id = sc.nextLine();
-            System.out.print("Tên khách hàng: ");
-            String name = sc.nextLine();
-            System.out.print("Mã vé: ");
-            String ticketId = sc.nextLine();
-            System.out.print("Tên phim: ");
-            String title = sc.nextLine();
-            System.out.print("Ngày chiếu: ");
-            String showTime = sc.nextLine();
-            System.out.print("Thời lượng: ");
-            int duration = Integer.parseInt(sc.nextLine());
-            System.out.print("Thể loại: ");
-            String genre = sc.nextLine();
-            System.out.print("Độ tuổi: ");
-            int age = Integer.parseInt(sc.nextLine());
-            Movie m = new Movie(id, name, title, showTime, duration, genre, age);
-            System.out.print("Ghế: ");
-            String seat = sc.nextLine();
-            System.out.print("Giờ chiếu: ");
-            String time = sc.nextLine();
-            System.out.print("Giá: ");
-            double price = Double.parseDouble(sc.nextLine());
-            Ticket t = new Ticket(id, name, ticketId, m, seat, time, price);
-            ticketList.addTicket(t);
+            
+
             System.out.println("Đã thêm vé.");
         } else if (c == 2) {
             ticketList.printTicketList();
