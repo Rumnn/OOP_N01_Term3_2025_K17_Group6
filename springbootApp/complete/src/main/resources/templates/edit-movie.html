@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Sửa phim</title>
+</head>
+<body>
+<h2>Sửa thông tin phim</h2>
+<form th:action="@{/movies/edit/{id}(id=${movie.id})}" th:object="${movie}" method="post">
+    ID phim: <input type="text" th:field="*{id}" readonly/><br/>
+    Tên phim: <input type="text" th:field="*{name}" required/><br/>
+    Tiêu đề: <input type="text" th:field="*{title}" required/><br/>
+    Ngày chiếu: <input type="text" th:field="*{showTime}" required/><br/>
+    Giờ chiếu: <input type="text" th:field="*{dateTime}" required/><br/>
+    Thời lượng: <input type="number" th:field="*{duration}" required/><br/>
+    Thể loại: <input type="text" th:field="*{genre}" required/><br/>
+    Độ tuổi: <input type="number" th:field="*{age}" required/><br/>
+    <button type="submit">Cập nhật</button>
+</form>
+<p th:text="${message}"></p>
+<a th:href="@{/movies}">Quay lại danh sách phim</a>
+<a th:href="@{/movies/add}">Thêm phim mới</a>
+</body>
+</html>

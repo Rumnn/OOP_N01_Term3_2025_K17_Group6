@@ -9,8 +9,9 @@ public class MovieList {
         movies.add(movie);
         return movies;
     }
+    // Sửa thông tin phim theo ID
 
-    public ArrayList<Movie> getEditMovie(String name, int movieId) {
+    public ArrayList<Movie> getEditMovieById(String name, int movieId) {
         for (int i = 0; i < movies.size(); i++) {
             if (Integer.parseInt(movies.get(i).getId()) == movieId) {
                 movies.get(i).setTitle(name);
@@ -18,6 +19,28 @@ public class MovieList {
             }
         }
         return movies;
+    }
+
+    // Sửa thông theo tên
+    public ArrayList<Movie> getEditMovieByName(String name, String title) {
+        for (int i = 0; i < movies.size(); i++) {
+            if (movies.get(i).getName().equals(name)) {
+                movies.get(i).setTitle(title);
+                break;
+            }
+        }
+        return movies;
+    }
+
+    // Tìm phim theo ID
+
+    public Movie findMovieById(String id) {
+        for (Movie movie : this.movies) { // assuming 'movies' is your list of Movie objects
+            if (movie.getId().equals(id)) {
+                return movie;
+            }
+        }
+        return null;
     }
 
     public ArrayList<Movie> getDeleteMovie(int movieId) {

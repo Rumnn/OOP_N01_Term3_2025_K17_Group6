@@ -1,6 +1,4 @@
 package com.example.servingwebcontent.model;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
  
 public class Movie extends ObjectGeneral {     
 
@@ -33,6 +31,16 @@ public class Movie extends ObjectGeneral {
         this.genre = genre;
         this.age = age;
     }
+    public void setId(String id) {
+        super.setId(id);
+    }
+
+    public String getName() {
+        return super.getName();
+    }
+    public void setName(String name) {
+        super.setName(name);
+    }
 
 
     public String getTitle() {
@@ -58,7 +66,6 @@ public class Movie extends ObjectGeneral {
     public int getAge() {
         return age;
     }
-
     public boolean isSuitableForAge(int viewerAge) {
     return viewerAge >= age;
     }

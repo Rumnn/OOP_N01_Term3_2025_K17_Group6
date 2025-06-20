@@ -14,6 +14,8 @@
         <input type="text" th:field="*{title}" required/><br/>
         <label>Ngày chiếu:</label>
         <input type="text" th:field="*{showTime}" required/><br/>
+        <label>Giờ chiếu:</label>
+        <input type="text" th:field="*{dateTime}" required/><br/>
         <label>Thời lượng:</label>
         <input type="number" th:field="*{duration}" required/><br/>
         <label>Thể loại:</label>
@@ -23,6 +25,6 @@
         <button type="submit">Thêm phim</button>
     </form>
     <p th:text="${message}"></p>
-    <a href="/movies">Xem danh sách phim</a>
+    <a href="/movies">Quay lại</a>
 </body>
 </html>

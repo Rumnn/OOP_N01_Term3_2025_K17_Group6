@@ -1,9 +1,6 @@
 package com.example.servingwebcontent;
 import com.example.servingwebcontent.model.*;
-import java.time.format.DateTimeFormatter;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.Scanner;
 
 
@@ -128,17 +125,45 @@ public class MainMenu {
         System.out.print("Chọn: ");
         int c = Integer.parseInt(sc.nextLine());
         if (c == 1) {
-            System.out.print("ID vé: ");
-            String id = sc.nextLine();
-            
+               System.out.print("ID vé: ");
+                String id = sc.nextLine();
 
+                // Chọn phim cho vé
+                System.out.println("Danh sách phim:");
+                movieList.printMovieList();
+                System.out.print("Nhập ID phim: ");
+                String movieId = sc.nextLine();
+                Movie movie = movieList.findMovieById(movieId);
+                if (movie == null) {
+                    System.out.println("Không tìm thấy phim!");
+                    return;
+                }
+
+                System.out.print("Số ghế: ");
+                String seat = sc.nextLine();
+                System.out.print("Giá vé: ");
+                double price = Double.parseDouble(sc.nextLine());
+
+                Ticket ticket = new Ticket(id, movie, seat, price);
+                ticketList.addTicket(ticket);
+                System.out.println("Đã thêm vé.");
             System.out.println("Đã thêm vé.");
         } else if (c == 2) {
             ticketList.printTicketList();
         } else if (c == 3) {
             System.out.print("Nhập ID vé cần xoá: ");
-            int ticketId = Integer.parseInt(sc.nextLine());
-            ticketList.getDeleteTickets(ticketId);
+            String ticketId = sc.nextLine();
+            Ticket ticket = ticketList.findTicketById(ticketId);
+            if (ticket == null) {
+                System.out.println("Không tìm thấy vé với ID: " + ticketId);
+                return;
+            }
+            ticketList.updateTicketById(ticketId, null); // Xoá vé bằng cách
+            System.out.println("Xoá vé thành công.");
+            ticketList.getAllTickets().remove(ticket); // Xoá vé khỏi danh sách
+            ticketList.removeTicketById(ticketId); // Gọi phương thức xoá vé
+            ticketList.printTicketsByCustomerId(ticketId); // In danh sách vé sau khi
+
             System.out.println("Đã xoá vé.");
         } else {
             System.out.println("Lựa chọn không hợp lệ!");

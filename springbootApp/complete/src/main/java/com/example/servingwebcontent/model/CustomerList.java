@@ -1,7 +1,7 @@
 package com.example.servingwebcontent.model;
 
 import java.util.ArrayList;
-import java.util.Scanner;
+
 
 public class CustomerList {
     private ArrayList<Customer> cus = new ArrayList<Customer>();

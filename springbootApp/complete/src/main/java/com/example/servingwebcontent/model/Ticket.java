@@ -6,7 +6,15 @@ public class Ticket extends ObjectGeneral {
     private String seat; //hàng ghế
     private double price;// giá
 
-    public Ticket(String id, /*String name, String ticketId,*/ Movie movie, String seat, String time, double price) {
+    public Ticket() {
+        super("", ""); // Gọi constructor của ObjectGeneral với id và name rỗng
+        // this.ticketId = "";
+        this.movie = new Movie(); // Khởi tạo đối tượng Movie mặc định
+        this.seat = "";
+        this.price = 0.0;
+    }
+
+    public Ticket(String id, Movie movie, String seat, double price) {
         super(id, ""); // Gọi constructor của ObjectGeneral với id và name rỗng
         // this.ticketId = ticketId;
         this.movie = movie;

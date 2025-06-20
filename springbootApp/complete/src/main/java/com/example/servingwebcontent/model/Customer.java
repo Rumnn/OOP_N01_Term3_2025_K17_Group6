@@ -48,9 +48,9 @@ public Customer() {
     // Phương thức hiển thị thông tin
     public void displayInfo() {
         System.out.println("ID          : " + id);
-        System.out.println("NameName    : " + name);
+        System.out.println("Name        : " + name);
         System.out.println("Email       : " + email);
-        System.out.println("NumberNumber: " + phoneNumber);
+        System.out.println("Number      : " + phoneNumber);
         System.out.println("----------------------------");
     }
 }

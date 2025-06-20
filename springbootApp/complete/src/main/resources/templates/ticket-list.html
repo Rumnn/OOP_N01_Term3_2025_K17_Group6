@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Danh sách vé</title>
+</head>
+<body>
+    <h2>Danh sách vé</h2>
+    <table border="1">
+        <tr>
+            <th>ID vé</th>
+            <th>ID phim</th>
+            <th>Số ghế</th>
+            <th>Giá vé</th>
+            <th>Hành động</th>
+        </tr>
+        <tr th:each="ticket : ${tickets}">
+            <td th:text="${ticket.id}"></td>
+            <td th:text="${ticket.movie.id}"></td>
+            <td th:text="${ticket.seat}"></td>
+            <td th:text="${ticket.price}"></td>
+            <td>
+                <a th:href="@{/tickets/edit/{id}(id=${ticket.id})}">Sửa</a> |
+                <a th:href="@{/tickets/delete/{id}(id=${ticket.id})}" onclick="return confirm('Bạn có chắc muốn xóa vé này?');">Xóa</a>
+            </td>
+        </tr>
+    </table>
+    <p th:text="${message}"></p>
+    <a th:href="@{/tickets/add}">Thêm vé mới</a>
+    <a th:href="@{/movies}">Quay lại danh sách phim</a>
+    <a th:href="@{/}">Trang chủ</a>
+</body>
+</html>

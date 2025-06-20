@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Danh sách khách hàng</title>
+</head>
+<body>
+    <h2>Danh sách khách hàng</h2>
+    <table border="1">
+        <tr>
+            <th>STT</th>
+            <th>ID</th>
+            <th>Tên</th>
+            <th>Email</th>
+            <th>Số điện thoại</th>
+            <th>Hành động</th>
+        </tr>
+        <tr th:each="customer, iterStat : ${customers}">
+            <td th:text="${iterStat.index}"></td>
+            <td th:text="${customer.id}"></td>
+            <td th:text="${customer.name}"></td>
+            <td th:text="${customer.email}"></td>
+            <td th:text="${customer.phoneNumber}"></td>
+            <td>
+                <a th:href="@{/customers/edit/{id}(id=${iterStat.index})}">Sửa</a> |
+                <a th:href="@{/customers/delete/{id}(id=${iterStat.index})}" onclick="return confirm('Bạn có chắc muốn xóa khách hàng này?');">Xóa</a>
+            </td>
+        </tr>
+    </table>
+    <p th:text="${message}"></p>
+    <a th:href="@{/customers/add}">Thêm khách hàng mới</a>
+    <a th:href="@{/movies}">Quay lại danh sách phim</a>
+    <a th:href="@{/tickets}">Xem danh sách vé</a>
+    <a th:href="@{/}">Trang chủ</a>
+</body>
+</html>
