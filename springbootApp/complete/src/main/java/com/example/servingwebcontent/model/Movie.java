@@ -1,9 +1,12 @@
 package com.example.servingwebcontent.model;
-
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+ 
 public class Movie extends ObjectGeneral {     
 
     private String title;
     private String showTime; // Ngày phát hành
+    private String dateTime; // Ngày giờ chiếu
     private int duration; // Thời lượng của phim
     private String genre; // Thể loại phim
     private int age; // Độ tuổi
@@ -12,6 +15,7 @@ public class Movie extends ObjectGeneral {
     super("", ""); // hoặc giá trị mặc định phù hợp với ObjectGeneral
     this.title = "";
     this.showTime = "";
+    this.dateTime = ""; // Hoặc giá trị mặc định khác
     this.duration = 0;
     this.genre = "";
     this.age = 0;
@@ -19,11 +23,12 @@ public class Movie extends ObjectGeneral {
 
 
 
-    public Movie(String id, String name, String title, String showTime, int duration, String genre, int age) {
+    public Movie(String id, String name, String title, String showTime, String dateTime ,int duration, String genre, int age) {
 
         super(id, name);
         this.title = title;
         this.showTime = showTime;
+        this.dateTime = dateTime; // Hoặc giá trị mặc định khác
         this.duration = duration;
         this.genre = genre;
         this.age = age;
@@ -36,6 +41,10 @@ public class Movie extends ObjectGeneral {
 
     public String getShowTime() {
         return showTime;
+    }
+
+    public String getDateTime() {
+        return dateTime;
     }
 
     public int getDuration() {
@@ -62,6 +71,9 @@ public class Movie extends ObjectGeneral {
     public void setDuration(int duration) {
         this.duration = duration;
     }
+    public void setDateTime(String dateTime) {
+        this.dateTime = dateTime;
+    }
     public void setGenre(String genre) {
         this.genre = genre;
     }
@@ -78,7 +90,8 @@ public class Movie extends ObjectGeneral {
         System.out.println("ID         : " + getId());
         System.out.println("Name       : " + getName());
         System.out.println("Movie      : " + title);
-        System.out.println("Launch Date: " + showTime);
+        System.out.println("ShowTime   : " + showTime);
+        System.out.println("ShowDateTime   : " + dateTime);
         System.out.println("Duration   : " + duration + " minutes");
         System.out.println("Genre      : " + genre);
         System.out.println("Age Rating : " + age + "+");

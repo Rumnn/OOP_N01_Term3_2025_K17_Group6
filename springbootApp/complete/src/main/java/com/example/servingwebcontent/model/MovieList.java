@@ -36,6 +36,7 @@ public class MovieList {
             System.out.println("Movie Name: " + movie.getName());
             System.out.println("Movie Title: " + movie.getTitle());
             System.out.println("Show Time: " + movie.getShowTime());
+            System.out.println("Show DateTime: " + movie.getDateTime());
             System.out.println("Duration: " + movie.getDuration());
             System.out.println("Genre: " + movie.getGenre());
             System.out.println("Age: " + movie.getAge());

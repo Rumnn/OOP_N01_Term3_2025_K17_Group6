@@ -11,6 +11,7 @@ import java.util.List;
 @Controller
 public class MovieController {
     private List<Movie> movieList = new ArrayList<>();
+    
 
     @GetMapping("/movies/add")
     public String showAddMovieForm(Model model) {
@@ -43,6 +44,7 @@ public class MovieController {
         }
         return "movies";
     }
+    
 
     @GetMapping("/show")
     public String showMovies(Model model) {
@@ -55,4 +57,5 @@ public class MovieController {
         }
         return "show";
     }
+
 }
