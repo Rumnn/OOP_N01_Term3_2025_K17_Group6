@@ -40,8 +40,8 @@ public class MovieController {
     }
 
     // Hiển thị form sửa phim
-    @GetMapping("/movies/edit/{id}")
-    public String editMovieForm(@PathVariable String id, Model model) {
+    @GetMapping("/movies/edit/{id:.+}")
+    public String editMovieForm(@PathVariable("id") String id, Model model) {
         Movie movieToEdit = null;
         for (Movie m : movieList) {
             if (m.getId().equals(id)) {

@@ -55,9 +55,17 @@ public class CustomerController {
     }
 
     @PostMapping("/customers/edit/{id}")
-    public String editCustomer(@PathVariable int id, @ModelAttribute Customer customer, Model model) {
-        if (id >= 0 && id < customerList.size()) {
-            customerList.set(id, customer);
+    public String editCustomer(@PathVariable String id, @ModelAttribute Customer customer, Model model) {
+        // Tìm vị trí khách hàng theo id
+        int index = -1;
+        for (int i = 0; i < customerList.size(); i++) {
+            if (customerList.get(i).getId().equals(id)) {
+                index = i;
+                break;
+            }
+        }
+        if (index != -1) {
+            customerList.set(index, customer);
             model.addAttribute("message", "Đã cập nhật khách hàng.");
         } else {
             model.addAttribute("error", "Không tìm thấy khách hàng.");

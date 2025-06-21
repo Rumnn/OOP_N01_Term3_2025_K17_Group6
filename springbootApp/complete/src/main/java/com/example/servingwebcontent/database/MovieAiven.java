@@ -4,6 +4,7 @@ import com.example.servingwebcontent.env.EnvReader;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
@@ -80,4 +81,60 @@ public class MovieAiven {
         return ml;
     }
     
+    public void insertMovie(Movie m) {
+        try (Connection conn = DriverManager.getConnection(
+                EnvReader.get("url"), EnvReader.get("user"), EnvReader.get("password"))) {
+            String sql = "INSERT INTO Movie (id, name, title, showTime, dateTime, duration, genre, age) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+            try (PreparedStatement ps = conn.prepareStatement(sql)) {
+                ps.setString(1, m.getId());
+                ps.setString(2, m.getName());
+                ps.setString(3, m.getTitle());
+                ps.setString(4, m.getShowTime());
+                ps.setString(5, m.getDateTime());
+                ps.setInt(6, m.getDuration());
+                ps.setString(7, m.getGenre());
+                ps.setInt(8, m.getAge());
+                ps.executeUpdate();
+            }
+            System.out.println("Đã lưu phim vào database");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void updateMovie(Movie m) {
+        try (Connection conn = DriverManager.getConnection(
+                EnvReader.get("url"), EnvReader.get("user"), EnvReader.get("password"))) {
+            String sql = "UPDATE Movie SET name=?, title=?, showTime=?, dateTime=?, duration=?, genre=?, age=? WHERE id=?";
+            try (PreparedStatement ps = conn.prepareStatement(sql)) {
+                ps.setString(1, m.getName());
+                ps.setString(2, m.getTitle());
+                ps.setString(3, m.getShowTime());
+                ps.setString(4, m.getDateTime());
+                ps.setInt(5, m.getDuration());
+                ps.setString(6, m.getGenre());
+                ps.setInt(7, m.getAge());
+                ps.setString(8, m.getId());
+                ps.executeUpdate();
+            }
+            System.out.println("Đã cập nhật phim trong database");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void deleteMovie(String id) {
+        try (Connection conn = DriverManager.getConnection(
+                EnvReader.get("url"), EnvReader.get("user"), EnvReader.get("password"))) {
+            String sql = "DELETE FROM Movie WHERE id=?";
+            try (PreparedStatement ps = conn.prepareStatement(sql)) {
+                ps.setString(1, id);
+                ps.executeUpdate();
+            }
+            System.out.println("Đã xóa phim khỏi database");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 }

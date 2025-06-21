@@ -95,6 +95,7 @@
             <th>Duration</th>
             <th>Genre</th>
             <th>Age</th>
+            <th>Action</th> <!-- Thêm cột Hành động vào bảng -->
         </tr>
         <tr th:each="movie : ${movies}">
             <td th:text="${movie.id}"></td>
@@ -105,6 +106,10 @@
             <td th:text="${movie.duration}"></td>
             <td th:text="${movie.genre}"></td>
             <td th:text="${movie.age}"></td>
+            <td>
+                <a th:href="@{/movies/edit/{id}(id=${movie.id})}" class="action-link">Sửa</a>
+                <a th:href="@{/movies/delete/{id}(id=${movie.id})}" class="action-link" onclick="return confirm('Bạn có chắc muốn xóa phim này?');">Xóa</a>
+            </td>
         </tr>
     </table>
     <a href="/movies/add">Thêm phim mới</a>
@@ -132,6 +137,10 @@
                 <td th:text="${movie.duration}"></td>
                 <td th:text="${movie.genre}"></td>
                 <td th:text="${movie.age}"></td>
+                <td>
+                    <a th:href="@{/movies/edit/{id}(id=${movie.id})}" class="action-link">Sửa</a>
+                    <a th:href="@{/movies/delete/{id}(id=${movie.id})}" class="action-link" onclick="return confirm('Bạn có chắc muốn xóa phim này?');">Xóa</a>
+                </td>
             </tr>
         </table>
         <div class="actions">
