@@ -5,7 +5,7 @@ public class Customer extends ObjectGeneral {
     private String phoneNumber; // Số điện thoại
     
 public Customer() {
-        super();
+        super("", "");
         this.email = "";
         this.phoneNumber = "";
         

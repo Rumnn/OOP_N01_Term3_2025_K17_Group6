@@ -7,7 +7,14 @@
     <h1>Danh sách phim</h1>
     <table border="1">
         <tr>
-            <th>ID</th><th>Name</th><th>Title</th><th>Show Time</th><th></th><th>Duration</th><th>Genre</th><th>Age</th>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Title</th>
+            <th>Show Time</th>
+            <th>Date Time</th>
+            <th>Duration</th>
+            <th>Genre</th>
+            <th>Age</th>
         </tr>
         <tr th:each="movie : ${movies}">
             <td th:text="${movie.id}"></td>
