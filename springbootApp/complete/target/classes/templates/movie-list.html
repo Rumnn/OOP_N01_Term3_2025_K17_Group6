@@ -84,37 +84,6 @@
     </style>
 </head>
 <body>
-    <h1>Danh sách phim</h1>
-    <table border="1">
-        <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Title</th>
-            <th>Show Time</th>
-            <th>Date Time</th>
-            <th>Duration</th>
-            <th>Genre</th>
-            <th>Age</th>
-            <th>Action</th> <!-- Thêm cột Hành động vào bảng -->
-        </tr>
-        <tr th:each="movie : ${movies}">
-            <td th:text="${movie.id}"></td>
-            <td th:text="${movie.name}"></td>
-            <td th:text="${movie.title}"></td>
-            <td th:text="${movie.showTime}"></td>
-            <td th:text="${movie.dateTime}"></td>
-            <td th:text="${movie.duration}"></td>
-            <td th:text="${movie.genre}"></td>
-            <td th:text="${movie.age}"></td>
-            <td>
-                <a th:href="@{/movies/edit/{id}(id=${movie.id})}" class="action-link">Sửa</a>
-                <a th:href="@{/movies/delete/{id}(id=${movie.id})}" class="action-link" onclick="return confirm('Bạn có chắc muốn xóa phim này?');">Xóa</a>
-            </td>
-        </tr>
-    </table>
-    <a href="/movies/add">Thêm phim mới</a>
-    <a th:href="@{/tickets}">Xem danh sách vé</a>
-    <a href="/customers">Quay lại danh sách khách hàng</a>
     <div class="container">
         <h1>Danh sách phim</h1>
         <table>
@@ -127,6 +96,7 @@
                 <th>Thời lượng</th>
                 <th>Thể loại</th>
                 <th>Độ tuổi</th>
+                <th>Hành động</th>
             </tr>
             <tr th:each="movie : ${movies}">
                 <td th:text="${movie.id}"></td>
