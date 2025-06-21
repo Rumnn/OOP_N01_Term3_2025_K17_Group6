@@ -1,6 +1,5 @@
 package com.example.servingwebcontent;
 
-import com.example.servingwebcontent.model.TicketList;
 import com.example.servingwebcontent.model.Ticket;
 import com.example.servingwebcontent.database.TicketAiven;
 import org.springframework.stereotype.Controller;

@@ -19,12 +19,14 @@
     <!-- Thư viện MySQL Connector -->
     <dependency>
       <groupId>mysql</groupId>
-      <artifactId>mysql-connector-j</artifactId>
+      <artifactId>mysql-connector-java</artifactId>
       <version>8.0.33</version>
     </dependency>
   </dependencies>
 
   <build>
+    <sourceDirectory>src/main/java</sourceDirectory>
+    <testSourceDirectory>src/test/java</testSourceDirectory>
     <plugins>
       <!-- Biên dịch Java -->
       <plugin>
@@ -45,7 +47,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>com.oop.group6.Main</mainClass>
+              <mainClass>main.App</mainClass>
             </manifest>
           </archive>
         </configuration>
