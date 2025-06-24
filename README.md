@@ -38,8 +38,8 @@
 + thêm sửa xóa khách hàng.
 + hiển thị thông tin khách hàng mua vé.
 
-- Chứa năng thanh toán tự động.
-- Chức năng in vé tự dộng.
+- Chứa năng thanh toán tự động.(chưa có)
+- Chức năng in vé tự dộng.(chưa có)
 
 
 
