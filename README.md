@@ -45,10 +45,10 @@
 
 
 ## Link project repo: 
-[GitHub Repo](https://github.com/Rumnn/OOP_N01_Term3_2025_K17_Group6)
+[GitHub Repo](https://github.com/Do17032005/OOP_N01_Term3_2025_K17_Group6)
 
 ## Link README:
-[README.md](https://github.com/Rumnn/OOP_N01_Term3_2025_K17_Group6/edit/main/README.md)
+[README.md](https://github.com/Do17032005/OOP_N01_Term3_2025_K17_Group6/edit/Main/README.md)
 
 
 
